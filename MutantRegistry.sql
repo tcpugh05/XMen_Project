@@ -70,11 +70,11 @@ INSERT INTO `Collaborators` VALUES (4,'April Oniel','New York NY','T','T','T','T
 
 
 --
--- Table structure for table `Citizen`
+-- Table structure for table `User_Accounts`
 --
 
-DROP TABLE IF EXISTS `Citizen`;
-CREATE TABLE `Citizen` (
+DROP TABLE IF EXISTS `User_accounts`;
+CREATE TABLE `User_Accounts` (
   `ID` int(15) NOT NULL auto_increment,
   `Name` varchar(35) NOT NULL default '',
   `PSWD` varchar(52),
@@ -84,10 +84,10 @@ CREATE TABLE `Citizen` (
 ) ; 
 
 --
--- Dumping data for table `Citizen`
+-- Dumping data for table `User_Accounts`
 --
 
-INSERT INTO `Citizen` VALUES (1,'Senitor Kelly',SHA('D0wnW1ththeMut@nts!!!'),'54','T');
+INSERT INTO `User_Accounts` VALUES (1,'Senitor Kelly',SHA('D0wnW1ththeMut@nts!!!'),'54','T');
 
 
 
