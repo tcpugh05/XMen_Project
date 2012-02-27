@@ -2,7 +2,9 @@ DROP DATABASE IF EXISTS mutantREG;
 CREATE DATABASE IF NOT EXISTS mutantREG;
 USE mutantREG;
 
-
+--
+--Created by Isaac Erickson--
+--
 
 --
 -- Table structure for table `Mutant`
