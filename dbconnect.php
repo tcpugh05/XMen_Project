@@ -23,6 +23,7 @@ if(!$result){
   first_name varchar(35) NOT NULL default 'Jane',
   last_name varchar(35) NOT NULL default 'Smith',
   pswd varchar(52),
+  username varchar(52), 
   reported int NOT NULL default '0',
   needsHelp enum('T','F') NOT NULL default 'F',
   PRIMARY KEY  (id)
