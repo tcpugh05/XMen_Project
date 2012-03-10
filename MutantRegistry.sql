@@ -93,5 +93,5 @@ CREATE TABLE `User_Accounts` (
 --
 
 INSERT INTO `User_accounts` VALUES (1,'Senitor', 'Kelly', 'Senitor Kelly', SHA('D0wnW1ththeMut@nts!!!'), 54, 'T');
-INSERT INTO 'User_accounts' VALUES (2,'Alice', 'Cooper', 'Alice Cooper', SHA('Rockon'),0, 'F');
+INSERT INTO `User_accounts` VALUES (2,'Alice', 'Cooper', 'Alice Cooper', SHA('Rockon'),0, 'F');
 
