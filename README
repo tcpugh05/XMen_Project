@@ -1,1 +1,16 @@
-Isaac Erickson was here.
+X-Men Mutant Project Read ME!!::: Welcome ::::
+
+ - Log in to your Github account
+ 	- Type : ssh -T git@github.com
+ - Change your directory to your xampp\mysql\bin
+ - Type : git clone git@github.com:tcpugh05/XMen_Project.git
+ 	::: This will clone all of our files from our Xmen folder into:::
+	::: your current directory (sql\bin folder).                  :::
+ - ::: Accessing Project :::
+ 	- start your Xampp and make sure Apache and MySql are running.
+	- Copy the XMen_Project folder to your xampp\htdocs folder.
+	- Open your browser and type the following::
+		- localhost/XMen_Project/register.php
+		- here is the beginning and start to our page!
+		- feel free to look around
+//program by : Tc Pugh // Ryan Wettlaufer // Issac Erickson // Mike Heim
