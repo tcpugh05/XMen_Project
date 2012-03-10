@@ -9,8 +9,8 @@
 	Password: <input type="password" name="pswd"/></br>
 	Need immediate help: 
 	<select name="needHelp">
-		<option value="true">True</option>
-		<option="false">False</option>
+		<option value = "true">True</option>
+		<option value = "false">False</option>
 	</select>
 	<input type="submit" name="mysubmit" value="Submit"/>
 	

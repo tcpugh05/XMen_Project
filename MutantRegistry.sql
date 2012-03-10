@@ -72,24 +72,25 @@ INSERT INTO `Collaborators` VALUES (4,'April Oniel','New York NY','T','T','T','T
 
 
 --
--- Table structure for table `User_Accounts`
+-- Table structure for table `User_accounts`
 --
 
 DROP TABLE IF EXISTS `User_accounts`;
 CREATE TABLE `User_Accounts` (
-  `ID` int(15) NOT NULL auto_increment,
-  `Name` varchar(35) NOT NULL default '',
-  `PSWD` varchar(52),
-  `Reported` int(5) NOT NULL default '0',
-  `NeedsHelp` enum('T','F') NOT NULL default 'F',
-  PRIMARY KEY  (`ID`)
-) ; 
+  id int(15) NOT NULL auto_increment,
+  first_name varchar(35) NOT NULL default 'Jane',
+  last_name varchar(35) NOT NULL default 'Smith',
+  pswd varchar(52),
+  reported int(5) NOT NULL default '0',
+  needshelp enum('T','F') NOT NULL default 'F',
+  PRIMARY KEY  (id)
+); 
+
 
 --
--- Dumping data for table `User_Accounts`
+-- Dumping data for table `User_accounts`
 --
 
-INSERT INTO `User_Accounts` VALUES (1,'Senitor Kelly',SHA('D0wnW1ththeMut@nts!!!'),'54','T');
-
+INSERT INTO `User_accounts` VALUES ('Senitor', 'Kelly', 'Senitor Kelly', SHA('D0wnW1ththeMut@nts!!!'), 54, 'T');
 
 
