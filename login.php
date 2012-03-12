@@ -1,6 +1,5 @@
 <?php
 	include 'header.php';
-	include 'connect.php';
 ?>
 <form action="loginController.php" method="get">
 	Username: <input type="text" name="username" /></br>

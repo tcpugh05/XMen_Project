@@ -1,4 +1,5 @@
 <?php
-$con = mysql_connect('localhost','root','');
-	mysql_select_db("my_db", $con);
+session_start();
+$con = mysql_connect('localhost','root','PUT PASSWORD HERE');
+	mysql_select_db("mutantREG", $con);
 ?>

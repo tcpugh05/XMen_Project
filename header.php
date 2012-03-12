@@ -3,6 +3,7 @@
 	<a href="register.php">Register</a>
 	<a href="logout.php">Logout</a>
 <?php
+include 'connect.php';
 	if(isset($_SESSION['firstname'])){
 		echo "<a href=\"user_list.php\">User List</a>";
 	}

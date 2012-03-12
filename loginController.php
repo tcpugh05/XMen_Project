@@ -1,6 +1,6 @@
 <?php
 	session_start(); 
-	include 'connect.php';
+	include 'header.php';
 	//Checkign to see if any fields are blank
 	$error = false; 
 	$required = array('username','pswd');
