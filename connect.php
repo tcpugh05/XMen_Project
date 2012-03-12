@@ -1,5 +1,5 @@
 <?php
 session_start();
-$con = mysql_connect('localhost','root','PUT PASSWORD HERE');
-	mysql_select_db("mutantREG", $con);
+$con = mysqli_connect('localhost','root','pancake1','mutantREG')
+	or die(mysqli_error());
 ?>
