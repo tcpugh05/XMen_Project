@@ -17,7 +17,7 @@ include 'connect.php';
 		echo "<a href=\"register.php\">Register</a>";
 	}
 ?>
-
+<link rel="stylesheet" type="text/css" href="CSS/style.css"/>
 
 
 </html>

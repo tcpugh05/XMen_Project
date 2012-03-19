@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'walkway';
+    src: local('☺'), 
+        url('type/Walkway_SemiBold.ttf') format('truetype');
+}
+
+html{
+	background-color:#FBF5E6; 
+	font-family: walkway,sans-serif;
+}
