@@ -1,0 +1,25 @@
+I have changed the `Mutant` table only to make it conform to 2NF format... I think.
+This will also enable us to meat the requirment for the next sprint that calls for us
+to make queries to multiple tables.
+
+-Removed:
+	`Power`
+	`PowerTwo`
+	`PowerOther`
+	
+	`FstAssoc`
+	`ScdAssoc`
+
+-Added:
+	Two new tables that will be refrenced by the auto_increment `ID` 
+	in the original Mutant table.
+
+	- Powers
+		-PID int(3) NOT NULL    --Refrenced to primary key in Mutant table
+		-Power varchar(35) NOT NULL   --Power description.  Can be anything now but we can
+					      --still keep the given options on the web site
+
+	- Assoc
+		-AID int(3) NOT NULL	--Refrenced to primary key in Mutant table
+		-Association varchar(35) NOT NULL  	--Associations.  X-Men, The Brotherhood, 
+							--etc.  can be anything.
