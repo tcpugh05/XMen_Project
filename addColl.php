@@ -23,7 +23,7 @@ include "header.php";
 			</select></br>
 		
 		Failed To Report Mutant:	
-		<select name="harbored">
+		<select name="failToRepo">
 				<option>T</option>
 				<option>F</option>
 			</select></br>
