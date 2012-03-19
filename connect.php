@@ -1,5 +1,5 @@
 <?php
 session_start();
-$con = mysqli_connect('localhost','root','pancake1','mutantREG')
+$con = mysqli_connect('localhost','root','','mReg2')
 	or die(mysqli_error());
 ?>

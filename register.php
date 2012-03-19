@@ -1,5 +1,5 @@
 <html>
-<?php	include 'dbconnect.php';  
+<?php	//include 'connect.php';  
 		include 'header.php';
 ?> 
 	<form action="registerController.php" method="get">
