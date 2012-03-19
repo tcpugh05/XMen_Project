@@ -1,7 +1,7 @@
 <html>
 	
 <?php
-	session_start(); 
+	include 'connect.php';
 	$_SESSION['firstname']=$_GET['firstname'];
 	$_SESSION['lastname']=$_GET['lastname'];
 	$_SESSION['username']=$_GET['username'];
@@ -34,9 +34,6 @@
 		$char = 'F';
 		echo "Is false"; 
 	}
-	$con = mysql_connect('localhost','root','');
-	mysql_select_db("my_db", $con);
-	
 	$query = "SELECT * FROM user_accounts where username='".$_GET['username']."'"; 
 	echo "</br>Query is".$query; 
 	$result = mysql_query($query,$con) or die('</br>Could not insert into table '.mysql_error());; 
@@ -45,7 +42,7 @@
 	echo "get username is ". $_GET['username']."</br>";
 	echo "number of rows is ". $number_of_rows; 
 	if($number_of_rows == 0){
-	$sql ="INSERT INTO User_Accounts(first_name,last_name,username,pswd,needsHelp)
+	$sql ="INSERT INTO User_Accounts(firstname,lastname,username,pswd,needHelp)
 			VALUES('".$_GET['firstname']."','".$_GET['lastname']."','".$_GET['username']."','" .$_GET['pswd']."',".$_GET['needHelp'] . ")"; 
 	echo $sql; 
 	mysql_query($sql,$con) or die('</br>Could not insert into table '.mysql_error());

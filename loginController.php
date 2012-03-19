@@ -1,5 +1,4 @@
 <?php
-	session_start(); 
 	include 'header.php';
 	//Checkign to see if any fields are blank
 	$error = false; 
@@ -30,8 +29,8 @@
 			header("Location: error.php?errorCode=The password is wrong");
 			exit;
 		}
-		$_SESSION['firstname']= $row['first_name'];
-		$_SESSION['lastname']=$row['last_name'];	
+		$_SESSION['firstname']= $row['firstname'];
+		$_SESSION['lastname']=$row['lastname'];	
 		$_SESSION['needHelp']=$row['needsHelp'];
 		echo "FIRSTNAME HERE: " . $_SESSION['firstname']."</br>";
 		echo $_SESSION['lastname']."</br>";
