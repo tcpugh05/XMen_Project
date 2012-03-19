@@ -122,14 +122,13 @@ INSERT INTO `Collaborators` VALUES (4,'April Oniel','New York NY','T','T','T','T
 
 DROP TABLE IF EXISTS `User_accounts`;
 CREATE TABLE `User_Accounts` (
-  id int(15) NOT NULL auto_increment,
   firstname varchar(35) NOT NULL default 'Jane',
   lastname varchar(35) NOT NULL default 'Smith',
   username varchar(35) NOT NULL default 'MrEcho',
   pswd varchar(52),
   reported int(5) NOT NULL default '0',
   needHelp enum('T','F') NOT NULL default 'F',
-  PRIMARY KEY  (id)
+  PRIMARY KEY  (username)
 ); 
 
 
@@ -137,6 +136,6 @@ CREATE TABLE `User_Accounts` (
 -- Dumping data for table `User_accounts`
 --
 
-INSERT INTO `User_accounts` VALUES (1,'Senitor', 'Kelly', 'Senitor Kelly', SHA('D0wnW1ththeMut@nts!!!'), 54, 'T');
+INSERT INTO `User_accounts` VALUES ('Senitor', 'Kelly', 'Senitor Kelly', SHA('D0wnW1ththeMut@nts!!!'), 54, 'T');
 
 
