@@ -6,7 +6,8 @@ include 'connect.php';
 		echo "<a href=\"addMutant.php\">Add Mutant</a>|";
 		echo "<a href=\"viewMutants.php\">View Mutants</a>|"; 
 		echo "<a href=\"addColl.php\">Add Collaborator</a>|";
-		echo "<a href=\"viewColl.php\">View Collborator."; 
+		echo "<a href=\"viewColl.php\">View Collborator</a>|";
+		echo "<a href=\"searchMutant.php\">Search Mutants</a>";  
 		echo "<a href=\"logout.php\">Logout</a>"; 
 	}
 	else{

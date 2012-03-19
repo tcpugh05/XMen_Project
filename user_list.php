@@ -1,14 +1,14 @@
 <?php
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//======
 //session_start(); 
 //include 'connect.php';
->>>>>>> 75f8fcf771115740ae71b859c301452885f58604
+//>>>>>>> 75f8fcf771115740ae71b859c301452885f58604
 include 'header.php';
 echo "<h1>Admin Page</h1>"; 
 echo "<h1>Hi there ".$_SESSION['firstname']; 
 $query = "SELECT * FROM User_accounts;"; 
-//$result = mysql_query($query,$con) or die('</br>Could not insert into table '.mysql_error());; 
+$result = mysql_query($query,$con) or die('</br>Could not insert into table '.mysql_error());; 
 echo "<table border='1'>"; 
 echo "<tr><th>First Name</th><th>Last Name</th><th>User Name</th><th>Password</th><th>Reported</th><th>Needs Help</th></tr>"; 
 while($row = mysql_fetch_array($result)) { 
