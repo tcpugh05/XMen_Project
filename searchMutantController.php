@@ -1,24 +1,41 @@
 <?php
 	include 'header.php';
 	$searchterm = $_POST['search'];
-	$query = "SELECT * FROM Mutant WHERE CodeName = ".$_POST['search'];
-	$result = mysqli_query($con, $query)
-	or die("ERROR QUERYING DATABASE");
-	echo "<table id=\"hor-minimalist-b\">\n<tr><th>ID</th><th>Code Name</th><th>Birth Name</th><th>Level</th><th>Power</th><th>Power Two</th><th>Other Powers</th><th>First Association</th><th>Second Association</th><th>Address</th></tr>\n\n";
-                while($row = mysqli_fetch_array($result)) {
-                        $ID = $row['ID'];
-                        $CodeName = $row['CodeName'];
-                        $BirthName = $row['BirthName'];
-			$Level = $row['Level'];
-			$Power = $row['Power'];
-			$PowerTwo = $row['PowerTwo'];
-			$PowerOther = $row['PowerOther'];
-			$FstAssoc = $row['FstAssoc'];
-			$ScdAssoc = $row['ScdAssoc'];
-			$Address = $row['Address'];
+        $query = "SELECT * FROM Mutant WHERE CodeName = '$searchterm'";
+	$result = mysql_query($query,$con) or die('</br>Could grab into table '.mysql_error());
 
-                        echo "<tr><td>$ID</td><td >$CodeName</td><td >$BirthName</td><td>$Level</td><td>$Power</td><td>$PowerTwo</td><td>$PowerOther</td><td>$FstAssoc</td><td>$ScdAssoc</td><td>$Address</td></tr>\n";
-            }
-            echo "</table>\n";
+echo "<table border='1'>";
+echo "<tr><th>ID</th><th>Code Name</th><th>Birth Name</th><th>Level</th><th>Address</th><th>Powers</th></tr>";
+while($row = mysql_fetch_array($result)) {
 
-	?>
+$query ="SELECT * FROM powers WHERE PID = ".$row['ID'];
+$power_result = mysql_query($query,$con) or die('</br> Could not grab powers' . mysql_error());
+$powers_string = '';
+while($power_row = mysql_fetch_array($power_result)){
+        //echo $power_row['PID'];
+        if($power_row['PID'] == $row['ID']){
+                $powers_string = $powers_string . $power_row['Power'].',';
+        }
+}
+echo "<tr><td>";
+echo $row['ID'];
+echo "</td><td>";
+echo $row['CodeName'];
+echo "</td><td>";
+echo $row['BirthName'];
+echo "</td><td>";
+echo $row['Level'];
+echo "</td><td>";
+echo $row['Address'];
+echo "</td><td>";
+echo $powers_string;
+echo "</td></tr>";
+}
+echo "</table>";
+
+
+
+
+?>
+
+
