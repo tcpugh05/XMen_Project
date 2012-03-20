@@ -21,7 +21,7 @@ echo $row['Funded'];
 echo "</td><td>"; 
 echo $row['Intamate'];
 echo "</td><td>";
-echo $row['FailedToRepo'];
+echo $row['FailedtoRepo'];
 echo "</td><td>";
 echo $row['Participated'];
 echo "</td><td>";
