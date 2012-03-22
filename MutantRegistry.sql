@@ -1,6 +1,7 @@
-DROP DATABASE IF EXISTS mutantREG;
-CREATE DATABASE IF NOT EXISTS mutantREG;
-USE mutantREG;
+DROP DATABASE IF EXISTS mREG2;
+CREATE DATABASE IF NOT EXISTS mREG2;
+USE mREG2;
+GRANT ALL ON *.* TO 'xmen1982'@'localhost' IDENTIFIED BY 'password';
 
 --
 --Created by Isaac Erickson--
@@ -16,11 +17,6 @@ CREATE TABLE `Mutant` (
   `CodeName` varchar(35) NOT NULL default '',
   `BirthName` varchar(35) NOT NULL default '',
   `Level` int(5) NOT NULL default '0',
-  `Power` enum('Telepathy','Energy Attack','Personal Fortification','Intellegence','Cold','Fire','Personal Regeneration','Associated Regeneration','Power Adoption','Speed','Technology Interface','Sonic','Telekanisis','Flight','Other','Unkown') NOT NULL default 'Unkown',
-  `PowerTwo` enum('Telepathy','Energy Attack', 'Personal Fortification','Intellegence','Cold','Fire','Personal Regeneration','Associated Regeneration','Power Adoption','Speed','Technology Interface','Sonic','Telekanisis','Flight','Other','None','Unkown') NOT NULL default 'Unkown',
-  `PowerOther` varchar(52) NOT NULL default '',
-  `FstAssoc` varchar(52) NOT NULL default '',
-  `ScdAssoc` varchar(52) NOT NULL default '',
   `Address` varchar(40) NOT NULL default '',
   PRIMARY KEY  (`ID`)
 ) ;
@@ -29,10 +25,60 @@ CREATE TABLE `Mutant` (
 -- Dumping data for table `Mutant`
 --
 
-INSERT INTO `Mutant` VALUES (1,'Cyclops','Scott Summers','4','Energy Attack','None','Powerfull Energy Beam from Eyes','X-Men','Unkown','Xavier Instatute for for the Gifted');
-INSERT INTO `Mutant` VALUES (2,'Beast','Unkown','4','Intellegence','None','Is Blue Ape','X-Men', 'Unkown','Xavier Instatute for for the Gifted');
-INSERT INTO `Mutant` VALUES (3,'Emma Frost','Emma Frost','4','Telepathy','Personal Fortification','Can harden body into diamonds but in that form cannont use telepathy','X-Men','The Inner Circle','Unkown');
-INSERT INTO `Mutant` VALUES (4,'Profesor X','Charles Xavier','5','Telepathy','None','Restricted to wheelchair and founder of X-Men','X-Men','Unkown','Xavier Instatute for for the Gifted');
+INSERT INTO `Mutant` VALUES (1,'Cyclops','Scott Summers','4','Xavier Instatute for for the Gifted');
+INSERT INTO `Mutant` VALUES (2,'Beast','Unkown','4','Xavier Instatute for for the Gifted');
+INSERT INTO `Mutant` VALUES (3,'Emma Frost','Emma Frost','4','Unkown');
+INSERT INTO `Mutant` VALUES (4,'Profesor X','Charles Xavier', 5 ,'Xavier Instatute for for the Gifted');
+INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', 5, 'Unkown');
+
+
+
+
+--
+-- Table structure for table `Powers`
+--
+
+DROP TABLE IF EXISTS `Powers`;
+CREATE TABLE `Powers`(
+	PID int(3) NOT NULL,
+	Power varchar(35) NOT NULL
+);
+--
+-- Dumping data for table `Powers`
+--
+
+INSERT INTO Powers VALUES (1, 'Energy Attack');
+INSERT INTO Powers VALUES (2, 'Intellegence');
+INSERT INTO Powers VALUES (2, 'Blue Furr');
+INSERT INTO Powers VALUES (3, 'Telepathy');
+INSERT INTO Powers VALUES (3, 'Personal Fortification');
+INSERT INTO Powers VALUES (4, 'Telepathy');
+INSERT INTO Powers VALUES (5, 'Super Strength');
+INSERT INTO Powers VALUES (5, 'Personal Fortification');
+
+
+
+--
+-- Table structure for table `Assoc`
+--
+
+DROP TABLE IF EXISTS `Assoc`;
+CREATE TABLE `Assoc`(
+	AID int(3) NOT NULL,
+	Association varchar(35) NOT NULL
+);
+
+--
+-- Dumping data for table 'Assoc'
+--
+
+INSERT INTO Assoc VALUES (1, 'X-Men');
+INSERT INTO Assoc VALUES (2, 'X-Men');
+INSERT INTO Assoc VALUES (3, 'X-Men');
+INSERT INTO Assoc VALUES (3, 'The Inner Circle');
+INSERT INTO Assoc VALUES (4, 'X-Men');
+INSERT INTO Assoc VALUES (5, 'The Brotherhood');
+
 
 
 
@@ -93,5 +139,5 @@ CREATE TABLE `User_Accounts` (
 --
 
 INSERT INTO `User_accounts` VALUES (1,'Senitor', 'Kelly', 'Senitor Kelly', SHA('D0wnW1ththeMut@nts!!!'), 54, 'T');
-INSERT INTO `User_accounts` VALUES (2,'Alice', 'Cooper', 'Alice Cooper', SHA('Rockon'),0, 'F');
+
 
