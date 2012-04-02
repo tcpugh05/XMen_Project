@@ -3,9 +3,6 @@ CREATE DATABASE IF NOT EXISTS mREG2;
 USE mREG2;
 GRANT ALL ON *.* TO 'xmen1982'@'localhost' IDENTIFIED BY 'password';
 
---
---Created by Isaac Erickson--
---
 
 --
 -- Table structure for table `Mutant`
