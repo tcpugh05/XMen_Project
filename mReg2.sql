@@ -37,8 +37,9 @@ INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', 5, 'Unkown
 
 DROP TABLE IF EXISTS `Powers`;
 CREATE TABLE `Powers`(
-	PID int(3) NOT NULL,
-	Power varchar(35) NOT NULL
+	PID int(3) NOT NULL auto_increment,
+	Power varchar(35) NOT NULL,
+	PRIMARY KEY  (`ID`)
 );
 --
 -- Dumping data for table `Powers`
@@ -61,8 +62,11 @@ INSERT INTO Powers VALUES (5, 'Personal Fortification');
 
 DROP TABLE IF EXISTS `Assoc`;
 CREATE TABLE `Assoc`(
-	AID int(3) NOT NULL,
-	Association varchar(35) NOT NULL
+	AID int(3) NOT NULL auto_increment,
+	Association varchar(35) NOT NULL,
+	PRIMARY KEY(`AID`)
+	
+	
 );
 
 --
@@ -70,11 +74,8 @@ CREATE TABLE `Assoc`(
 --
 
 INSERT INTO Assoc VALUES (1, 'X-Men');
-INSERT INTO Assoc VALUES (2, 'X-Men');
-INSERT INTO Assoc VALUES (3, 'X-Men');
-INSERT INTO Assoc VALUES (3, 'The Inner Circle');
-INSERT INTO Assoc VALUES (4, 'X-Men');
-INSERT INTO Assoc VALUES (5, 'The Brotherhood');
+INSERT INTO Assoc VALUES (2, 'The Inner Circle');
+INSERT INTO Assoc VALUES (3, 'The Brotherhood');
 
 
 
