@@ -1,4 +1,6 @@
 //Issac, write in this file
+//I writed.  Sorry for not helping out... at all.  I got caught up working on our 330 project
+
 
 
 SELECT mutant.codename, powers.power FROM mutant, powers WHERE mutant.ID = power.PID;
