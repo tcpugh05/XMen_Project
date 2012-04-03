@@ -17,6 +17,7 @@ CREATE TABLE `Mutant` (
   `Level` int(5) NOT NULL default '0',
   `Address` varchar(40) NOT NULL default '',
   `BossID` int(15) NOT NULL default '0',
+  `FoundBy` varchar(40) NOT NULL default '',
   PRIMARY KEY  (`ID`)
 ) ;
 
@@ -24,11 +25,11 @@ CREATE TABLE `Mutant` (
 -- Dumping data for table `Mutant`
 --
 
-INSERT INTO `Mutant` VALUES (1,'Cyclops','Scott Summers','4','Xavier Institute for for the Gifted','2');
-INSERT INTO `Mutant` VALUES (2,'Beast','Unknown','4','Xavier Institute for for the Gifted','1');
-INSERT INTO `Mutant` VALUES (3,'Emma Frost','Emma Frost','4','Unknown','3');
-INSERT INTO `Mutant` VALUES (4,'Profesor X','Charles Xavier', '5' ,'Xavier Institute for for the Gifted','3');
-INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', '5' , 'Unknown','3');
+INSERT INTO `Mutant` VALUES (1,'Cyclops','Scott Summers','4','Xavier Institute for for the Gifted','2','Mike Heim');
+INSERT INTO `Mutant` VALUES (2,'Beast','Unknown','4','Xavier Institute for for the Gifted','1','Isaac Ericsonn');
+INSERT INTO `Mutant` VALUES (3,'Emma Frost','Emma Frost','4','Unknown','3','TC Pugh');
+INSERT INTO `Mutant` VALUES (4,'Profesor X','Charles Xavier', '5' ,'Xavier Institute for for the Gifted','3','Wettlaufer');
+INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', '5' , 'Unknown','3','Classified');
 
 
 
