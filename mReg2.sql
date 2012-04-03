@@ -24,10 +24,10 @@ CREATE TABLE `Mutant` (
 -- Dumping data for table `Mutant`
 --
 
-INSERT INTO `Mutant` VALUES (1,'Cyclops','Scott Summers','4','Xavier Instatute for for the Gifted','2');
-INSERT INTO `Mutant` VALUES (2,'Beast','Unknown','4','Xavier Instatute for for the Gifted','1');
+INSERT INTO `Mutant` VALUES (1,'Cyclops','Scott Summers','4','Xavier Institute for for the Gifted','2');
+INSERT INTO `Mutant` VALUES (2,'Beast','Unknown','4','Xavier Institute for for the Gifted','1');
 INSERT INTO `Mutant` VALUES (3,'Emma Frost','Emma Frost','4','Unknown','3');
-INSERT INTO `Mutant` VALUES (4,'Profesor X','Charles Xavier', '5' ,'Xavier Instatute for for the Gifted','3');
+INSERT INTO `Mutant` VALUES (4,'Profesor X','Charles Xavier', '5' ,'Xavier Institute for for the Gifted','3');
 INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', '5' , 'Unknown','3');
 
 
@@ -39,23 +39,21 @@ INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', '5' , 'Unk
 
 DROP TABLE IF EXISTS `Powers`;
 CREATE TABLE `Powers`(
-	power_id int(4) NOT NULL auto_increment,
 	PID int(3) NOT NULL,
-	Power varchar(35) NOT NULL,
-	PRIMARY KEY(power_id)
+	Power varchar(35) NOT NULL
 );
 --
 -- Dumping data for table `Powers`
 --
 
-INSERT INTO Powers VALUES (0,1, 'Energy Attack');
-INSERT INTO Powers VALUES (1,2, 'Intellegence');
-INSERT INTO Powers VALUES (2,2, 'Blue Furr');
-INSERT INTO Powers VALUES (3,3, 'Telepathy');
-INSERT INTO Powers VALUES (4,3, 'Personal Fortification');
-INSERT INTO Powers VALUES (5,4, 'Telepathy');
-INSERT INTO Powers VALUES (6,5, 'Super Strength');
-INSERT INTO Powers VALUES (7,5, 'Personal Fortification');
+INSERT INTO Powers VALUES (1, 'Energy Attack');
+INSERT INTO Powers VALUES (2, 'Intellegence');
+INSERT INTO Powers VALUES (2, 'Blue Furr');
+INSERT INTO Powers VALUES (3, 'Telepathy');
+INSERT INTO Powers VALUES (3, 'Personal Fortification');
+INSERT INTO Powers VALUES (4, 'Telepathy');
+INSERT INTO Powers VALUES (5, 'Super Strength');
+INSERT INTO Powers VALUES (5, 'Personal Fortification');
 
 
 
@@ -65,11 +63,8 @@ INSERT INTO Powers VALUES (7,5, 'Personal Fortification');
 
 DROP TABLE IF EXISTS `Assoc`;
 CREATE TABLE `Assoc`(
-	AID int(3) NOT NULL auto_increment,
-	Association varchar(35) NOT NULL,
-	PRIMARY KEY(`AID`)
-	
-	
+	AID int(3) NOT NULL,
+	Association varchar(35) NOT NULL
 );
 
 --
@@ -77,8 +72,11 @@ CREATE TABLE `Assoc`(
 --
 
 INSERT INTO Assoc VALUES (1, 'X-Men');
-INSERT INTO Assoc VALUES (2, 'The Inner Circle');
-INSERT INTO Assoc VALUES (3, 'The Brotherhood');
+INSERT INTO Assoc VALUES (2, 'X-Men');
+INSERT INTO Assoc VALUES (3, 'X-Men');
+INSERT INTO Assoc VALUES (3, 'The Inner Circle');
+INSERT INTO Assoc VALUES (4, 'X-Men');
+INSERT INTO Assoc VALUES (5, 'The Brotherhood');
 
 
 
