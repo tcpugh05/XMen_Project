@@ -42,6 +42,7 @@ include "header.php";
 				<option>Other</option>
 				<option>Unknown</option>
 			</select></br>
+			Found By:<input type="text" name="FoundBy"></br>
 		<?php
 			$query ="SELECT CodeName FROM mutant;";
 			$result = mysql_query($query,$con) or die('</br> Could not grab powers' . mysql_error());
@@ -50,6 +51,7 @@ include "header.php";
 			while($row = mysql_fetch_array($result)){
 			echo "<option>".$row['CodeName']."</option>";
 			}
+			
 			echo "</select>"; 
 			echo "</br>";
 			

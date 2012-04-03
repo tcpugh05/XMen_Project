@@ -32,8 +32,8 @@
 	
 	if($number_of_rows == 0){
 		
-		$sql = "INSERT INTO mutant(CodeName,BirthName,Level,Address,bossID)
-			VALUES('".$_GET['codeName']."','".$_GET['birthName']."','".$_GET['level']."','" .$_GET['address']."',"."0".")"; 
+		$sql = "INSERT INTO mutant(CodeName,BirthName,Level,Address,bossID,FoundBy)
+			VALUES('".$_GET['codeName']."','".$_GET['birthName']."','".$_GET['level']."','" .$_GET['address']."','"."0"."','".$_GET['FoundBy']."');"; 
 		
 	echo $sql; 
 	mysql_query($sql,$con) or die('</br>Could not insert into table '.mysql_error());
