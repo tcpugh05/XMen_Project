@@ -84,15 +84,15 @@ INSERT INTO Assoc VALUES (3, 'The Brotherhood');
 
 
 
-DROP TABLE IF EXISTS `Boss`;
-CREATE TABLE `Boss`(
-	BID int(3) NOT NULL,
-	BirthName varchar(30) NOT NULL);
-INSERT INTO Boss VALUES (1, 'Cyclops');
-INSERT INTO Boss VALUES (2, 'Beast');
-INSERT INTO Boss VALUES (3, 'Emma Frost');
-INSERT INTO Boss VALUES (4, 'Professor X');
-INSERT INTO Boss VALUES (5, 'Jugernaught');
+--DROP TABLE IF EXISTS `Boss`;
+--CREATE TABLE `Boss`(
+--	BID int(3) NOT NULL,
+--	BirthName varchar(30) NOT NULL);
+--INSERT INTO Boss VALUES (1, 'Cyclops');
+--INSERT INTO Boss VALUES (2, 'Beast');
+--INSERT INTO Boss VALUES (3, 'Emma Frost');
+--INSERT INTO Boss VALUES (4, 'Professor X');
+--INSERT INTO Boss VALUES (5, 'Jugernaught');
 
 	
 

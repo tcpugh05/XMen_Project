@@ -16,7 +16,7 @@
 		}
 	}
 	if($error){
-		echo"ERROR IS TRUE ERROR IS TRUE";
+	//	echo"ERROR IS TRUE ERROR IS TRUE";
 		header("Location: error.php?errorCode=Did not fill out form completely"); 
 		exit; 	
 	}
@@ -32,8 +32,8 @@
 	
 	if($number_of_rows == 0){
 		
-		$sql = "INSERT INTO mutant(CodeName,BirthName,Level,Address)
-			VALUES('".$_GET['codeName']."','".$_GET['birthName']."','".$_GET['level']."','" .$_GET['address']."')"; 
+		$sql = "INSERT INTO mutant(CodeName,BirthName,Level,Address,bossID)
+			VALUES('".$_GET['codeName']."','".$_GET['birthName']."','".$_GET['level']."','" .$_GET['address']."',"."0".")"; 
 		
 	echo $sql; 
 	mysql_query($sql,$con) or die('</br>Could not insert into table '.mysql_error());
@@ -48,14 +48,20 @@
 	mysql_query($sql,$con) or die('</br>Could not insert power 1 into table '.mysql_error());
 	
 	$sql = "INSERT INTO powers(PID,Power) VALUES('".$row["ID"]."','".$_GET['power2']."');";
-	mysql_query($sql,$con) or die('</br>Could not insert power 2 into table '.mysql_error());	
-	header("Location: viewMutants.php"); 
+	mysql_query($sql,$con) or die('</br>Could not insert power 2 into table '.mysql_error());	 
+	$sql = "SELECT ID FROM mutant WHERE CodeName='".$_GET['bossID']."';";
+	echo $sql; 
+	$result = mysql_query("$sql",$con) or die("</br> Could not find ID" . mysql_error());
+	$row = mysql_fetch_assoc($result);
+	$sql = "UPDATE mutant SET BossID=".$row['ID']." WHERE CodeName='".$_GET['codeName']."';"; 
+	echo $sql; 
+	
+	mysql_query("$sql",$con) or die("</br> Could not find ID" . mysql_error());
+	
+	header("Location: viewMutants.php");
 	}
 	else{
 		header("Location: error.php?errorCode=Duplicate Mutants"); 
 	}
-	$sql = "INSERT INTO Boss(birthName) FROM mReg2 WHERE mReg2.ID='".$_GET['bossID']."';";
-	//$query = "SELECT BirthName FROM mutant where ID == '".$_GET['bossID']."'";
 	
-	//$query = "c1.id, c2.id AS Boss FROM mReg2 c1 INNER JOIN mReg2 c2 ON c1.ID = c2.
 ?>

@@ -42,7 +42,19 @@ include "header.php";
 				<option>Other</option>
 				<option>Unknown</option>
 			</select></br>
-		type Boss ID : <input type="text" name="bossID"></br>
+		<?php
+			$query ="SELECT CodeName FROM mutant;";
+			$result = mysql_query($query,$con) or die('</br> Could not grab powers' . mysql_error());
+			echo "Boss"; 
+			echo "<select name=bossID>";
+			while($row = mysql_fetch_array($result)){
+			echo "<option>".$row['CodeName']."</option>";
+			}
+			echo "</select>"; 
+			echo "</br>";
+			
+		?>
+
 				
 	<!--	First Association:<input type="text" name="birthName"></br>
 		Second Association:<input type="text" name="birthName"></br> -->
