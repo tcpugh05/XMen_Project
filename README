@@ -10,7 +10,15 @@ X-Men Mutant Project Read ME!!::: Welcome ::::
  	- start your Xampp and make sure Apache and MySql are running.
 	- Copy the XMen_Project folder to your xampp\htdocs folder.
 	- Open your browser and type the following::
-		- localhost/XMen_Project/MutantRegistry.php
+		- localhost/phpmyadmin/index.php.
+		- At the upper right of the screen click the button 'More'.
+		- Select 'Import'.
+		- Import file by clicking 'Choose File' button.
+		- Open mReg2.sql from your xampp/htdocs/XMen_Project folder.
+		- Click the 'Go' button at the bottom of the screen.
+		       ----- Your Now Ready to Acess the Website!-----
+		- Open the browser.
+		- type the url: localhost/XMen_Project/MutantRegistry.php
 		- here is the beginning and start to our page!
 		- feel free to look around
 //program by : Tc Pugh // Ryan Wettlaufer // Issac Erickson // Mike Heim
