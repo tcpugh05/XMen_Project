@@ -37,22 +37,23 @@ INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', 5, 'Unkown
 
 DROP TABLE IF EXISTS `Powers`;
 CREATE TABLE `Powers`(
-	PID int(3) NOT NULL auto_increment,
+	power_id int(4) NOT NULL auto_increment,
+	PID int(3) NOT NULL,
 	Power varchar(35) NOT NULL,
-	PRIMARY KEY  (`ID`)
+	PRIMARY KEY(power_id)
 );
 --
 -- Dumping data for table `Powers`
 --
 
-INSERT INTO Powers VALUES (1, 'Energy Attack');
-INSERT INTO Powers VALUES (2, 'Intellegence');
-INSERT INTO Powers VALUES (2, 'Blue Furr');
-INSERT INTO Powers VALUES (3, 'Telepathy');
-INSERT INTO Powers VALUES (3, 'Personal Fortification');
-INSERT INTO Powers VALUES (4, 'Telepathy');
-INSERT INTO Powers VALUES (5, 'Super Strength');
-INSERT INTO Powers VALUES (5, 'Personal Fortification');
+INSERT INTO Powers VALUES (0,1, 'Energy Attack');
+INSERT INTO Powers VALUES (1,2, 'Intellegence');
+INSERT INTO Powers VALUES (2,2, 'Blue Furr');
+INSERT INTO Powers VALUES (3,3, 'Telepathy');
+INSERT INTO Powers VALUES (4,3, 'Personal Fortification');
+INSERT INTO Powers VALUES (5,4, 'Telepathy');
+INSERT INTO Powers VALUES (6,5, 'Super Strength');
+INSERT INTO Powers VALUES (7,5, 'Personal Fortification');
 
 
 

@@ -11,7 +11,8 @@ include 'connect.php';
 		echo "<a href=\"addColl.php\">Add Collaborator</a>|";
 		echo "<a href=\"viewColl.php\">View Collborator</a>|";
 		echo "<a href=\"searchCollaborator.php\">Search Collaborator</a>|";
-		echo "<a href=\"searchMutant.php\">Search Mutants</a>";  
+		echo "<a href=\"searchMutant.php\">Search Mutants</a>|";  
+		echo "<a href=\"mysqlfu.php\">mysqlfu</a>|"; 
 		echo "<a href=\"logout.php\">Logout</a>"; 
 	}
 	else{
