@@ -1,11 +1,9 @@
+
 DROP DATABASE IF EXISTS mREG2;
 CREATE DATABASE IF NOT EXISTS mREG2;
 USE mREG2;
 GRANT ALL ON *.* TO 'xmen1982'@'localhost' IDENTIFIED BY 'password';
 
---
---Created by Isaac Erickson--
---
 
 --
 -- Table structure for table `Mutant`
@@ -18,6 +16,8 @@ CREATE TABLE `Mutant` (
   `BirthName` varchar(35) NOT NULL default '',
   `Level` int(5) NOT NULL default '0',
   `Address` varchar(40) NOT NULL default '',
+  `BossID` int(15) NOT NULL default '0',
+  `FoundBy` varchar(40) NOT NULL default '',
   PRIMARY KEY  (`ID`)
 ) ;
 
@@ -25,11 +25,11 @@ CREATE TABLE `Mutant` (
 -- Dumping data for table `Mutant`
 --
 
-INSERT INTO `Mutant` VALUES (1,'Cyclops','Scott Summers','4','Xavier Instatute for for the Gifted');
-INSERT INTO `Mutant` VALUES (2,'Beast','Unkown','4','Xavier Instatute for for the Gifted');
-INSERT INTO `Mutant` VALUES (3,'Emma Frost','Emma Frost','4','Unkown');
-INSERT INTO `Mutant` VALUES (4,'Profesor X','Charles Xavier', 5 ,'Xavier Instatute for for the Gifted');
-INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', 5, 'Unkown');
+INSERT INTO `Mutant` VALUES (1,'Cyclops','Scott Summers','4','Xavier Institute for for the Gifted','2','Mike Heim');
+INSERT INTO `Mutant` VALUES (2,'Beast','Unknown','4','Xavier Institute for for the Gifted','1','Isaac Ericsonn');
+INSERT INTO `Mutant` VALUES (3,'Emma Frost','Emma Frost','4','Unknown','3','TC Pugh');
+INSERT INTO `Mutant` VALUES (4,'Profesor X','Charles Xavier', '5' ,'Xavier Institute for for the Gifted','3','Wettlaufer');
+INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', '5' , 'Unknown','3','Classified');
 
 
 
@@ -40,21 +40,23 @@ INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', 5, 'Unkown
 
 DROP TABLE IF EXISTS `Powers`;
 CREATE TABLE `Powers`(
+	power_id int(4) NOT NULL auto_increment,
 	PID int(3) NOT NULL,
-	Power varchar(35) NOT NULL
+	Power varchar(35) NOT NULL,
+	PRIMARY KEY(power_id)
 );
 --
 -- Dumping data for table `Powers`
 --
 
-INSERT INTO Powers VALUES (1, 'Energy Attack');
-INSERT INTO Powers VALUES (2, 'Intellegence');
-INSERT INTO Powers VALUES (2, 'Blue Furr');
-INSERT INTO Powers VALUES (3, 'Telepathy');
-INSERT INTO Powers VALUES (3, 'Personal Fortification');
-INSERT INTO Powers VALUES (4, 'Telepathy');
-INSERT INTO Powers VALUES (5, 'Super Strength');
-INSERT INTO Powers VALUES (5, 'Personal Fortification');
+INSERT INTO Powers VALUES (0,1, 'Energy Attack');
+INSERT INTO Powers VALUES (1,2, 'Intellegence');
+INSERT INTO Powers VALUES (2,2, 'Blue Furr');
+INSERT INTO Powers VALUES (3,3, 'Telepathy');
+INSERT INTO Powers VALUES (4,3, 'Personal Fortification');
+INSERT INTO Powers VALUES (5,4, 'Telepathy');
+INSERT INTO Powers VALUES (6,5, 'Super Strength');
+INSERT INTO Powers VALUES (7,5, 'Personal Fortification');
 
 
 
@@ -64,8 +66,9 @@ INSERT INTO Powers VALUES (5, 'Personal Fortification');
 
 DROP TABLE IF EXISTS `Assoc`;
 CREATE TABLE `Assoc`(
-	AID int(3) NOT NULL,
-	Association varchar(35) NOT NULL
+	AID int(3) NOT NULL auto_increment,
+	Association varchar(35) NOT NULL,
+	PRIMARY KEY(`AID`)
 );
 
 --
@@ -73,17 +76,16 @@ CREATE TABLE `Assoc`(
 --
 
 INSERT INTO Assoc VALUES (1, 'X-Men');
-INSERT INTO Assoc VALUES (2, 'X-Men');
-INSERT INTO Assoc VALUES (3, 'X-Men');
-INSERT INTO Assoc VALUES (3, 'The Inner Circle');
-INSERT INTO Assoc VALUES (4, 'X-Men');
-INSERT INTO Assoc VALUES (5, 'The Brotherhood');
+INSERT INTO Assoc VALUES (2, 'The Inner Circle');
+INSERT INTO Assoc VALUES (3, 'The Brotherhood');
 
 
 
 
 
 
+
+	
 
 --
 -- Table structure for table `Collaborators`
