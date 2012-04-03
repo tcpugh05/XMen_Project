@@ -1,3 +1,4 @@
+
 DROP DATABASE IF EXISTS mREG2;
 CREATE DATABASE IF NOT EXISTS mREG2;
 USE mREG2;
@@ -15,6 +16,7 @@ CREATE TABLE `Mutant` (
   `BirthName` varchar(35) NOT NULL default '',
   `Level` int(5) NOT NULL default '0',
   `Address` varchar(40) NOT NULL default '',
+  `BossID` int(15) NOT NULL default '0',
   PRIMARY KEY  (`ID`)
 ) ;
 
@@ -22,11 +24,11 @@ CREATE TABLE `Mutant` (
 -- Dumping data for table `Mutant`
 --
 
-INSERT INTO `Mutant` VALUES (1,'Cyclops','Scott Summers','4','Xavier Instatute for for the Gifted');
-INSERT INTO `Mutant` VALUES (2,'Beast','Unkown','4','Xavier Instatute for for the Gifted');
-INSERT INTO `Mutant` VALUES (3,'Emma Frost','Emma Frost','4','Unkown');
-INSERT INTO `Mutant` VALUES (4,'Profesor X','Charles Xavier', 5 ,'Xavier Instatute for for the Gifted');
-INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', 5, 'Unkown');
+INSERT INTO `Mutant` VALUES (1,'Cyclops','Scott Summers','4','Xavier Instatute for for the Gifted','2');
+INSERT INTO `Mutant` VALUES (2,'Beast','Unknown','4','Xavier Instatute for for the Gifted','1');
+INSERT INTO `Mutant` VALUES (3,'Emma Frost','Emma Frost','4','Unknown','3');
+INSERT INTO `Mutant` VALUES (4,'Profesor X','Charles Xavier', '5' ,'Xavier Instatute for for the Gifted','3');
+INSERT INTO Mutant VALUES (5, 'Jugernaught', 'The Jugernaught Itch!', '5' , 'Unknown','3');
 
 
 
@@ -80,7 +82,17 @@ INSERT INTO Assoc VALUES (5, 'The Brotherhood');
 
 
 
+DROP TABLE IF EXISTS `Boss`;
+CREATE TABLE `Boss`(
+	BID int(3) NOT NULL,
+	BirthName varchar(30) NOT NULL);
+INSERT INTO Boss VALUES (1, 'Cyclops');
+INSERT INTO Boss VALUES (2, 'Beast');
+INSERT INTO Boss VALUES (3, 'Emma Frost');
+INSERT INTO Boss VALUES (4, 'Professor X');
+INSERT INTO Boss VALUES (5, 'Jugernaught');
 
+	
 
 --
 -- Table structure for table `Collaborators`

@@ -2,10 +2,10 @@
 include 'header.php';
 echo "<h1>Mutant View</h1>"; 
 echo "<h1>Hi there ".$_SESSION['firstname']; 
-$query = "SELECT * FROM mutant;"; 
+$query = "SELECT c1.ID, c1.CodeName, c1.BirthName, c1.Address, c2.CodeName AS BossID FROM mutant c1 INNER JOIN mutant c2 ON c1.BOSSID = c2.ID; "; 
 $result = mysql_query($query,$con) or die('</br>Could grab into table '.mysql_error()); 
 echo "<table border='1'>"; 
-echo "<tr><th>ID</th><th>Code Name</th><th>Birth Name</th><th>Level</th><th>Address</th><th>Powers</th></tr>"; 
+echo "<tr><th>ID</th><th>Code Name</th><th>Birth Name</th><th>Level</th><th>Address</th><th>Powers</th><th>Boss</th></tr>"; 
 while($row = mysql_fetch_array($result)) {
 
 $query ="SELECT * FROM powers WHERE PID = ".$row['ID'];
@@ -28,7 +28,9 @@ echo $row['Level'];
 echo "</td><td>";
 echo $row['Address'];
 echo "</td><td>"; 
-echo $powers_string; 
+echo $powers_string;
+echo "</td><td>";  
+echo $row['BossID']; 
 echo "</td></tr>";
 } 
 echo "</table>"; 

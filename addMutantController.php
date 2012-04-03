@@ -5,8 +5,9 @@
 	echo $_GET['level'];
 	echo $_GET['power'];
 	echo $_GET['power2']; 
+	echo $_GET['bossID'];
 	echo $_GET['address']; 
-	$required = array('codeName','birthName','level','power','power2','address');
+	$required = array('codeName','birthName','level','power','power2','bossID','address');
 	$error = false;
 	foreach($required as $field){
 		if(empty($_GET[$field])){
@@ -53,4 +54,8 @@
 	else{
 		header("Location: error.php?errorCode=Duplicate Mutants"); 
 	}
+	$sql = "INSERT INTO Boss(birthName) FROM mReg2 WHERE mReg2.ID='".$_GET['bossID']."';";
+	//$query = "SELECT BirthName FROM mutant where ID == '".$_GET['bossID']."'";
+	
+	//$query = "c1.id, c2.id AS Boss FROM mReg2 c1 INNER JOIN mReg2 c2 ON c1.ID = c2.
 ?>

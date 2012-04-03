@@ -6,7 +6,7 @@ include "header.php";
 		Code Name:<input type="text" name="codeName"></br>
 		Birth Name:<input type="text" name="birthName"></br>
 		Level: <input type="text" name="level"></br>
-		Power
+		Power : 
 			<select name="power">
 				<option>Telepathy</option>
 				<option>Energy Attack</option>
@@ -24,7 +24,7 @@ include "header.php";
 				<option>Other</option>
 				<option>Unknown</option>
 			</select></br>
-		Power Other
+		Power Other : 
 			<select name="power2">
 				<option>Telepathy</option>
 				<option>Energy Attack</option>
@@ -42,6 +42,8 @@ include "header.php";
 				<option>Other</option>
 				<option>Unknown</option>
 			</select></br>
+		type Boss ID : <input type="text" name="bossID"></br>
+				
 	<!--	First Association:<input type="text" name="birthName"></br>
 		Second Association:<input type="text" name="birthName"></br> -->
 		Address:<input type="text" name="address"></br>
